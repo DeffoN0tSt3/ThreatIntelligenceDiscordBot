@@ -15,9 +15,9 @@ The vx-underground Threat Intelligence Discord Bot gets updates from various cle
 * Step 2. Update the config.ini file. This should be filled out with the webhooks you created in the previous step, and in case you'd like to monitor Telegram channels, also some [Telegram API details](https://core.telegram.org/api/obtaining_api_id)
 * Step 3. Have internet connection
     - If you're running the Telegram channel monitor, please note it downloads images from the Telegram channel. Sufficient hard disk space will be required to store images. By default downloaded images are stored in the TelegramImages subfolder. Change the ImageDownloadFolder property in the config.ini file if you'd like to store them somewhere else.
-* Step 4. Run the scripts. This is done using the following command, with bot_type have the value of either "telegram" or "rss", depending on what bot you want to run:
+* Step 4. Run the scripts. This is done using the following command, the script will prompt you for which type of bot you wish to run. Choose either rss or telegram:
 ```
-python -m Source [bot_type]
+python -m Source
 ```
 
 # Known issues
