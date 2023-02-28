@@ -11,20 +11,23 @@ def verify_config(section_name):
         )
 
 if __name__ == "__main__":
-    print("Which bot would you like to run? The possible options are rss and telegram.")
+    # read the config file
+    bot_type = config.get("BotType", "bot_type", fallback=None)
+    if bot_type:
+        bot_type = bot_type.strip().lower()
+    else:
+        bot_type = input("Which bot would you like to run? The possible options are rss and telegram. > ").strip().lower()
+        config.set("BotType", "bot_type", bot_type)
+        with open("config.ini", "w") as config_file:
+            config.write(config_file)
 
-    while True:
-        command = input("> ").strip().lower()
+    if bot_type == "rss":
+        from .Bots import RSS as bot
+    elif bot_type == "telegram":
+        verify_config("Telegram")
+        from .Bots import Telegram as bot
+    else:
+        sys.exit("Invalid bot type specified in the config.ini file")
 
-        if command == "rss":
-            from .Bots import RSS as bot
-            break
-        elif command == "telegram":
-            verify_config("Telegram")
-            from .Bots import Telegram as bot
-            break
-        else:
-            print("Argument not recognized. Please enter either 'rss' or 'telegram'.")
-
-    configure_logger(command)
+    configure_logger(bot_type)
     bot.main()

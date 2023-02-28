@@ -1,1 +1,87 @@
-
+[2023-02-28 01:07:48,387] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 01:07:48,387] INFO in RSS: Handling RSS feed for Threatpost
+[2023-02-28 01:07:49,148] INFO in RSS: Handling RSS feed for Krebs on Security
+[2023-02-28 01:07:49,819] INFO in RSS: Handling RSS feed for Dark Reading
+[2023-02-28 01:07:51,165] INFO in RSS: Handling RSS feed for We Live Security
+[2023-02-28 01:07:51,899] INFO in RSS: Handling RSS feed for DaVinci Forensics
+[2023-02-28 01:07:53,385] INFO in RSS: Handling RSS feed for Cisco
+[2023-02-28 01:07:54,752] INFO in RSS: Handling RSS feed for Information Security Magazine
+[2023-02-28 01:07:55,337] INFO in RSS: Handling RSS feed for Trend Micro
+[2023-02-28 01:07:56,288] INFO in RSS: Handling RSS feed for Bleeping Computer
+[2023-02-28 01:07:57,340] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 01:14:45,059] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 01:14:45,059] INFO in RSS: Handling RSS feed for Threatpost
+[2023-02-28 01:14:45,770] INFO in RSS: Handling RSS feed for Krebs on Security
+[2023-02-28 01:14:46,599] INFO in RSS: Handling RSS feed for Dark Reading
+[2023-02-28 01:14:47,783] INFO in RSS: Handling RSS feed for We Live Security
+[2023-02-28 01:14:48,557] INFO in RSS: Handling RSS feed for DaVinci Forensics
+[2023-02-28 01:14:49,734] INFO in RSS: Handling RSS feed for Cisco
+[2023-02-28 01:14:51,154] INFO in RSS: Handling RSS feed for Information Security Magazine
+[2023-02-28 01:14:51,787] INFO in RSS: Handling RSS feed for Trend Micro
+[2023-02-28 01:14:52,746] INFO in RSS: Handling RSS feed for Bleeping Computer
+[2023-02-28 01:14:56,646] INFO in RSS: Handling RSS feed for Proof Point
+[2023-02-28 01:14:57,227] INFO in RSS: Handling RSS feed for Hacker News
+[2023-02-28 01:14:57,822] INFO in RSS: Handling RSS feed for Schneier on Security
+[2023-02-28 01:14:58,530] INFO in RSS: Handling RSS feed for Binary Defense
+[2023-02-28 01:14:58,902] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 13:29:40,171] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 13:29:40,171] INFO in RSS: Handling RSS feed for Threatpost
+[2023-02-28 13:29:40,990] INFO in RSS: Handling RSS feed for Krebs on Security
+[2023-02-28 13:29:41,590] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 13:30:14,872] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 13:30:14,872] INFO in RSS: Handling RSS feed for Threatpost
+[2023-02-28 13:30:15,594] INFO in RSS: Handling RSS feed for Krebs on Security
+[2023-02-28 13:30:16,313] INFO in RSS: Handling RSS feed for Dark Reading
+[2023-02-28 13:30:18,105] INFO in RSS: Handling RSS feed for We Live Security
+[2023-02-28 13:30:19,186] INFO in RSS: Handling RSS feed for DaVinci Forensics
+[2023-02-28 13:30:19,570] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 14:24:46,815] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 14:24:46,816] INFO in RSS: Handling RSS feed for Threatpost
+[2023-02-28 14:24:47,624] INFO in RSS: Handling RSS feed for Krebs on Security
+[2023-02-28 14:24:48,404] INFO in RSS: Handling RSS feed for Dark Reading
+[2023-02-28 14:24:49,556] INFO in RSS: Handling RSS feed for We Live Security
+[2023-02-28 14:24:50,269] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 14:25:19,717] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 14:25:19,717] INFO in RSS: Handling RSS feed for Threatpost
+[2023-02-28 14:25:20,438] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 14:25:51,553] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 14:25:51,554] INFO in RSS: Handling RSS feed for Threatpost
+[2023-02-28 14:25:52,395] INFO in RSS: Handling RSS feed for Krebs on Security
+[2023-02-28 14:25:52,482] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 14:26:04,353] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 14:26:04,353] INFO in RSS: Handling RSS feed for Threatpost
+[2023-02-28 14:26:05,068] INFO in RSS: Handling RSS feed for Krebs on Security
+[2023-02-28 14:26:05,449] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 14:31:08,208] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 14:31:08,210] INFO in RSS: Handling RSS feed for Graham Cluley
+[2023-02-28 14:31:13,263] INFO in RSS: Handling RSS feed for Threatpost
+[2023-02-28 14:31:14,211] INFO in RSS: Handling RSS feed for Krebs on Security
+[2023-02-28 14:31:14,822] INFO in RSS: Handling RSS feed for Dark Reading
+[2023-02-28 14:31:16,929] INFO in RSS: Handling RSS feed for We Live Security
+[2023-02-28 14:31:17,016] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 14:32:06,764] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 14:32:06,764] INFO in RSS: Handling RSS feed for Graham Cluley
+[2023-02-28 14:32:08,152] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 14:32:17,155] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 14:32:17,156] INFO in RSS: Handling RSS feed for Graham Cluley
+[2023-02-28 14:32:18,631] INFO in RSS: Handling RSS feed for Threatpost
+[2023-02-28 14:32:19,365] INFO in RSS: Handling RSS feed for Krebs on Security
+[2023-02-28 14:32:20,010] INFO in RSS: Handling RSS feed for Dark Reading
+[2023-02-28 14:32:20,887] INFO in RSS: Handling RSS feed for We Live Security
+[2023-02-28 14:32:21,967] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 14:35:35,066] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 14:35:35,067] INFO in RSS: Handling RSS feed for Graham Cluley
+[2023-02-28 14:35:36,213] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 14:35:57,610] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 14:35:57,611] INFO in RSS: Handling RSS feed for Graham Cluley
+[2023-02-28 14:35:59,103] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 16:05:00,271] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 16:05:00,272] INFO in RSS: Handling RSS feed for Graham Cluley
+[2023-02-28 16:05:01,873] INFO in RSS: Handling RSS feed for Threatpost
+[2023-02-28 16:05:02,417] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 16:06:11,792] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 16:06:11,792] INFO in RSS: Handling RSS feed for Graham Cluley
+[2023-02-28 16:06:13,270] CRITICAL in RSS: Writing last things to rss log file and closing up
+[2023-02-28 16:07:54,166] INFO in RSS: Checking Private RSS Feed
+[2023-02-28 16:07:54,167] INFO in RSS: Handling RSS feed for Graham Cluley
+[2023-02-28 16:07:55,964] CRITICAL in RSS: Writing last things to rss log file and closing up
