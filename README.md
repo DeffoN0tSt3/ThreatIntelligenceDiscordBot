@@ -51,4 +51,4 @@ In the Python script:
 - General quality of life improvements and debugging by [Julien Mousqueton](https://github.com/JMousqueton)
 - Feature enhancement, standardization, etc. by [hRun](https://github.com/hRun)
 - Feature enhancement, standardization, etc. by [come2darkside](https://twitter.com/come2darkside_)
-- Added more debugging throughout the RSS script. Changed startup method to prompt user for their desired use i.e rss/telegram if new config variable is not present - it will also be saved upon first launch. ([BotType]bot_type = rss) (this removes the usage of the match case/syntax py/3.10req line20 main. edit by [DeffoN0tSt3](https://github.com/DeffoN0tSt3)
+- Feature enhancement + Debugging + New Config Variable. Changed startup method to prompt user for their desired use i.e rss/telegram, only if new config variable is not present - if not present your choice will be saved to config upon first launch. ([BotType]bot_type =) (this removes the usage of the match case/syntax py/3.10req line20 main. edit by [DeffoN0tSt3](https://github.com/DeffoN0tSt3)
