@@ -3,12 +3,11 @@ import os
 import requests
 import time
 from enum import Enum
-
 import signal
 import sys
 import atexit
-
 import logging
+
 logger = logging.getLogger("rss")
 
 import feedparser
@@ -78,14 +77,16 @@ rss_log_file_path = os.path.join(
     config.get("RSS", "RSSLogFile", raw=True, vars={"fallback": "RSSLog.txt"}),
 )
 
-
 rss_log = ConfigParser()
 rss_log.read(rss_log_file_path)
 
-
 def get_ransomware_news(source):
     logger.debug("Querying latest ransomware information")
-    posts = requests.get(source).json()
+    try:
+        posts = requests.get(source).json()
+    except Exception as e:
+        logger.error(f"Error retrieving data from {source}: {e}")
+        return []
 
     for post in posts:
         post["publish_date"] = post["discovered"]
@@ -94,12 +95,14 @@ def get_ransomware_news(source):
 
     return posts
 
-
 def get_news_from_rss(rss_item):
     logger.debug(f"Querying RSS feed at {rss_item[0]}")
-    feed_entries = feedparser.parse(rss_item[0]).entries
+    try:
+        feed_entries = feedparser.parse(rss_item[0]).entries
+    except Exception as e:
+        logger.error(f"Error parsing RSS feed {rss_item[0]}: {e}")
+        return []
 
-    # This is needed to ensure that the oldest articles are proccessed first. See https://github.com/vxunderground/ThreatIntelligenceDiscordBot/issues/9 for reference
     for rss_object in feed_entries:
         rss_object["source"] = rss_item[1]
         try:
@@ -113,55 +116,67 @@ def get_news_from_rss(rss_item):
 
     return feed_entries
 
-
 def proccess_articles(articles):
+    logger.debug("Processing articles")
     messages, new_articles = [], []
     articles.sort(key=lambda article: article["publish_date"])
 
     for article in articles:
         try:
             config_entry = rss_log.get("main", article["source"])
-        except NoOptionError:  # automatically add newly discovered groups to config
+        except NoOptionError:
+            logger.debug(f"No config entry found for source {article['source']}")
             rss_log.set("main", article["source"], " = ?")
             config_entry = rss_log.get("main", article["source"])
 
         if config_entry.endswith("?"):
+            logger.debug(f"New source {article['source']} detected, adding to config")
             rss_log.set("main", article["source"], article["publish_date"])
         else:
             if config_entry >= article["publish_date"]:
+                logger.debug(f"Article {article['title']} already processed, skipping")
+                logger.debug(f"config_entry: {config_entry}, article_publish_date: {article['publish_date']}")
                 continue
 
+        logger.debug(f"Adding article {article['title']} to messages")
         messages.append(format_single_article(article))
         new_articles.append(article)
 
     return messages, new_articles
 
-
 def send_messages(hook, messages, articles, batch_size=10):
     logger.debug(f"Sending {len(messages)} messages in batches of {batch_size}")
     for i in range(0, len(messages), batch_size):
-        hook.send(embeds=messages[i : i + batch_size])
+        try:
+            hook.send(embeds=messages[i : i + batch_size])
+        except Exception as e:
+            logger.error(f"Error sending message to webhook: {e}")
+            continue
 
         for article in articles[i : i + batch_size]:
             rss_log.set("main", article["source"], article["publish_date"])
 
         time.sleep(3)
 
-
 def process_source(post_gathering_func, source, hook):
-    raw_articles = post_gathering_func(source)
+    try:
+        raw_articles = post_gathering_func(source)
+    except Exception as e:
+        logger.error(f"Error retrieving data from {source}: {e}")
+        return
 
     processed_articles, new_raw_articles = proccess_articles(raw_articles)
     send_messages(hook, processed_articles, new_raw_articles)
-
 
 def handle_rss_feed_list(rss_feed_list, hook):
     for rss_feed in rss_feed_list:
         logger.info(f"Handling RSS feed for {rss_feed[1]}")
         webhooks["StatusMessages"].send(f"> {rss_feed[1]}")
 
-        process_source(get_news_from_rss, rss_feed, hook)
-
+        try:
+            process_source(get_news_from_rss, rss_feed, hook)
+        except Exception as e:
+            logger.error(f"Error processing RSS feed: {e}")
 
 def write_status_message(message):
     webhooks["StatusMessages"].send(f"**{time.ctime()}**: *{message}*")
@@ -174,7 +189,6 @@ def clean_up_and_close():
         rss_log.write(f)
 
     sys.exit(0)
-
 
 def main():
     logger.debug("Registering clean-up handlers")
@@ -199,7 +213,6 @@ def main():
         write_status_message("All done, going to sleep")
 
         time.sleep(1800)
-
 
 if __name__ == "__main__":
     main()

@@ -1,9 +1,8 @@
 from configparser import ConfigParser, NoOptionError
 from discord import Webhook, RequestsWebhookAdapter
-
 from .Utils import verify_config_section
-
 from os import mkdir
+import sys
 
 # Need to create folder before running script, as the logger will otherwise throw error
 try:

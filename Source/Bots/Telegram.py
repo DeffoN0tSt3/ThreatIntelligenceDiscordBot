@@ -1,7 +1,6 @@
 import os
 import time
 from discord import File
-
 from telethon.sync import events, TelegramClient
 from telethon.errors.rpcerrorlist import UsernameInvalidError
 from telethon.tl.functions.channels import JoinChannelRequest
