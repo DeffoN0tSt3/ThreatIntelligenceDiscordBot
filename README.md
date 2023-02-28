@@ -44,7 +44,8 @@ All monitored RSS feeds are in the rss_feed_list object. To add a new RSS feed s
 In the Python script:
 ```
     rss_feed_list = [["https://grahamcluley.com/feed/", "Graham Cluley"],
-                     ["https://1337WebsiteIWannaFollow.com/feed/", "1337Website"]]```
+                     ["https://1337WebsiteIWannaFollow.com/feed/", "1337Website"]]
+```
 # Credit
 - Original commit, code base, proof-of-concept by [smelly__vx](https://twitter.com/smelly__vx)
 - General quality of life improvements and debugging by [Julien Mousqueton](https://github.com/JMousqueton)
