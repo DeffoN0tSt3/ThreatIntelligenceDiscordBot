@@ -15,7 +15,7 @@ The vx-underground Threat Intelligence Discord Bot gets updates from various cle
 * Step 2. Update the config.ini file. This should be filled out with the webhooks you created in the previous step, and in case you'd like to monitor Telegram channels, also some [Telegram API details](https://core.telegram.org/api/obtaining_api_id)
 * Step 3. Have internet connection
     - If you're running the Telegram channel monitor, please note it downloads images from the Telegram channel. Sufficient hard disk space will be required to store images. By default downloaded images are stored in the TelegramImages subfolder. Change the ImageDownloadFolder property in the config.ini file if you'd like to store them somewhere else.
-* Step 4. Optional - Set the bot_type (rss/telegram) in config. If no type provided you will be prompted and the type saved to config.
+* Step 4. Optional - Set the bot_type (rss/telegram) in config. If no type provided you will be prompted on script bot startup and the type saved to config.
 * Step 5 Run the scripts. This is done using the following command.
 ```
 python -m Source
@@ -51,4 +51,4 @@ In the Python script:
 - General quality of life improvements and debugging by [Julien Mousqueton](https://github.com/JMousqueton)
 - Feature enhancement, standardization, etc. by [hRun](https://github.com/hRun)
 - Feature enhancement, standardization, etc. by [come2darkside](https://twitter.com/come2darkside_)
-- Added more debugging throughout the RSS script. Changed startup method to prompt user for their desired use i.e rss/telegram if new config variable is not present([BotType]bot_type = rss) (this removes the usage of the match case/syntax py/3.10req line20 main. edit by [DeffoN0tSt3](https://github.com/DeffoN0tSt3)
+- Added more debugging throughout the RSS script. Changed startup method to prompt user for their desired use i.e rss/telegram if new config variable is not present - it will also be saved upon first launch. ([BotType]bot_type = rss) (this removes the usage of the match case/syntax py/3.10req line20 main. edit by [DeffoN0tSt3](https://github.com/DeffoN0tSt3)
