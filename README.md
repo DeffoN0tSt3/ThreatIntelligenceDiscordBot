@@ -51,3 +51,4 @@ In the Python script:
 - General quality of life improvements and debugging by [Julien Mousqueton](https://github.com/JMousqueton)
 - Feature enhancement, standardization, etc. by [hRun](https://github.com/hRun)
 - Feature enhancement, standardization, etc. by [come2darkside](https://twitter.com/come2darkside_)
+- Added more debugging throughout the RSS script. Changed startup method to prompt user for their desired use i.e rss/telegram (this removes the usage of the match case/syntax py/3.10req line20 main. config is now in conf dir. by [DeffoN0tSt3](https://github.com/DeffoN0tSt3)
